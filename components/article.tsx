@@ -43,13 +43,24 @@ export default function Article() {
     }
   };
 
+
+ 
+
+
   useEffect(() => {
     fetchArticles();
   }, [page]);
 
-  const filteredPosts = articles.filter((post) =>
-    post.title.includes(searchTerm)
+   const filteredPosts = articles.filter((post) => {
+  return (
+    typeof post?.title === 'string' &&
+    post.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+});
+
+//   const filteredPosts = articles.filter((post) =>
+//     post.title.toLowerCase().includes(searchTerm.toLowerCase())
+//   );
 
   return (
     <main className="px-6 py-10 max-w-7xl mx-auto">
