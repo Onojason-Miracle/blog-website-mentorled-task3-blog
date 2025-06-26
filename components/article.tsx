@@ -48,7 +48,7 @@ export default function Article() {
   }, [page]);
 
   const filteredPosts = articles.filter((post) =>
-    post.title.toLowerCase().includes(searchTerm.toLowerCase())
+    post.title.includes(searchTerm)
   );
 
   return (

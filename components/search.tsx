@@ -30,3 +30,6 @@ export default function Search({ searchTerm, setSearchTerm }: SearchBarProps) {
     </div>
   );
 }
+
+
+// post.title.toLowerCase().includes(searchTerm.toLowerCase
