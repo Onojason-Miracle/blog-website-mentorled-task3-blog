@@ -1,0 +1,271 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container for all news */
+.newsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  justify-content: center;
+  margin-top: 3%;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  align-items: flex-start;
+  transition: transform 0.2s ease;
+}
+
+.newsImage {
+  width: 100%;
+  height: 200;
+}
+
+.middle {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+
+/* news image inside the card */
+.newsImage {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+footer {
+  border-top: 2px solid #fff;
+  margin-top: 5%;
+  padding-bottom: 2%;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 1%;
+}
+
+.homepage {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("https://res.cloudinary.com/blackgirlmagic/image/upload/v1750967297/task2/SL-0212121-40670-60_j1smvl.jpg");
+  background-size: cover;
+  height: 40vh;
+  background-position: center;
+  color: white;
+  width: 100%;
+}
+
+.heading {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40vh;
+}
+
+.heading h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.heading h5 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 1%;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heading h5 {
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 3s;
+  opacity: 0;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.heading h1 {
+  animation: slideInFromRight 1s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+/* Tablet - 1024px or smaller */
+
+@media (min-width: 893px) and (max-width: 1024px) {
+  .heading h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    width: 40%;
+  }
+
+  .heading h5 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 4%;
+    width: 50%;
+  }
+
+  .heading {
+    width: 90%;
+    margin: auto;
+    height: 40vh;
+  }
+
+  .homepage {
+    height: 40vh;
+  }
+
+  footer p {
+    margin: auto;
+    text-align: center;
+    margin-top: 1%;
+    width: 90%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+    height: 80vh;
+  }
+}
+
+/* Tablet / Large phones - 768px or smaller */
+
+@media (min-width: 768px) and (max-width: 892px) {
+  .heading h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    width: 40%;
+  }
+
+  .heading h5 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 4%;
+    width: 50%;
+  }
+
+  .heading {
+    width: 80%;
+    margin: auto;
+    height: 50vh;
+  }
+
+  .homepage {
+    height: 50vh;
+  }
+
+  footer p {
+    margin: auto;
+    text-align: center;
+    margin-top: 1%;
+    width: 90%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+    height: 80vh;
+  }
+}
+
+/* Small mobile - 640px or smaller */
+
+@media (max-width: 640px) {
+  .heading h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    width: 40%;
+  }
+
+  .heading h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 4%;
+    width: 50%;
+  }
+
+  .heading {
+    width: 80%;
+    margin: auto;
+    height: 50vh;
+  }
+
+  .homepage {
+    height: 50vh;
+  }
+
+  footer p {
+    margin: auto;
+    text-align: center;
+    margin-top: 1%;
+    width: 90%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+    height: 87vh;
+  }
+}
