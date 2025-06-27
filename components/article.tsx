@@ -51,12 +51,18 @@ export default function Article() {
     fetchArticles();
   }, [page]);
 
-   const filteredPosts = articles.filter((post) => {
-  return (
-    typeof post?.title === 'string' &&
-    post.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-});
+  const filteredPosts = Array.isArray(articles)
+  ? articles.filter((post) =>
+      post?.title?.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  : [];
+
+//    const filteredPosts = articles.filter((post) => {
+//   return (
+//     typeof post?.title === 'string' &&
+//     post.title.toLowerCase().includes(searchTerm.toLowerCase())
+//   );
+// });
 
 //   const filteredPosts = articles.filter((post) =>
 //     post.title.toLowerCase().includes(searchTerm.toLowerCase())
