@@ -12,6 +12,9 @@ interface BlogPost {
   image: string;
   url: string;
   content: string;
+//    source: {
+//     name: string;
+//   };
 }
 
 interface BlogCardProps {
@@ -49,6 +52,7 @@ export default function BlogCard({ post }: BlogCardProps) {
               image: post.image,
               author: post.author,
               date: post.date,
+            //   category: post.source.name,
               snippet: post.snippet || "No full content provided.",
               url: post.url,
               content: post.content,

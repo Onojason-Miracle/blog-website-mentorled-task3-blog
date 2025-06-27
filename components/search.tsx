@@ -32,4 +32,10 @@ export default function Search({ searchTerm, setSearchTerm }: SearchBarProps) {
 }
 
 
-// post.title.toLowerCase().includes(searchTerm.toLowerCase
+// af0a9b01d0d2ddadbd6a4502db1dc143
+
+// apikey = 'af0a9b01d0d2ddadbd6a4502db1dc143';
+// url = 'https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey=af0a9b01d0d2ddadbd6a4502db1dc143
+
+// https://newsapi.org/v2/everything?q=bitcoin&pageSize=${pageSize}&page=${page}&from=${fromDate}&to=${toDate}&apiKey=30afa424321c4f94bcb6262d8f185222
+

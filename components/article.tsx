@@ -34,7 +34,9 @@ export default function Article() {
   const fetchArticles = async () => {
     try {
       const res = await fetch(
-        `  https://newsapi.org/v2/everything?q=bitcoin&pageSize=${pageSize}&page=${page}&from=${fromDate}&to=${toDate}&apiKey=30afa424321c4f94bcb6262d8f185222`
+
+        `https://gnews.io/api/v4/search?q=bitcoin&lang=en&from=${fromDate}&to=${toDate}&max=10&apikey=af0a9b01d0d2ddadbd6a4502db1dc143`
+
       );
       const data = await res.json();
       setArticles(data.articles);
@@ -88,7 +90,7 @@ export default function Article() {
                 date: new Date(post.publishedAt).toLocaleDateString(),
                 snippet: post.description || "No description available.",
                 image:
-                  post.urlToImage ||
+                  post.image ||
                   "https://res.cloudinary.com/blackgirlmagic/image/upload/v1750965301/task2/Bitcoin_cryptocurrency_4K_futuristic_wallpaper_1_zhovg9.jpg",
                 content: post.content || "No full content available.",
                 url: post.url,
@@ -99,7 +101,7 @@ export default function Article() {
       )}
 
       {/* Pagination controls */}
-      <div className="flex justify-center items-center gap-4 mt-10">
+      {/* <div className="flex justify-center items-center gap-4 mt-10">
         <button
           onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
           disabled={page === 1}
@@ -114,7 +116,7 @@ export default function Article() {
         >
           Next
         </button>
-      </div>
+      </div> */}
     </main>
   );
 }

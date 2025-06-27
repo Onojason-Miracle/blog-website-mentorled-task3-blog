@@ -12,7 +12,7 @@ export default function ArticleDetailPage() {
   const image = searchParams.get("image");
   const author = searchParams.get("author");
   const date = searchParams.get("date");
-  const content = searchParams.get("content");
+  const category = searchParams.get("category");
   const desc = searchParams.get("snippet");
   const url = searchParams.get("url");
 
@@ -20,10 +20,10 @@ export default function ArticleDetailPage() {
     <>
       <main className="max-w-3xl mx-auto px-4 py-10 main">
         <h1 className="text-3xl font-bold mb-4 text-white-700">{title}</h1>
-        <div className="flex items-center justify-start gap-2">
+        {/* <div className="flex items-center justify-start gap-2">
           <strong className="text-white-900 text-sm mb-2">By: </strong>{" "}
-          <p className="text-purple-500 text-sm mb-2">{author}</p>
-        </div>
+          <p className="text-purple-500 text-sm mb-2">{category}</p>
+        </div> */}
         {image && (
           <img
             src={image}
@@ -48,4 +48,7 @@ export default function ArticleDetailPage() {
       <Footer />
     </>
   );
+}
+{
+  /* https://cryptopanic.com/api/developer/v2/posts/?auth_token=3dcb385e90065669a89d78aad60b8fd43f9b4448&pageSize=${pageSize}&page=${page}&from=${fromDate}&to=${toDate}` */
 }
