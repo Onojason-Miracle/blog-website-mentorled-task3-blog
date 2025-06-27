@@ -7,7 +7,7 @@ import Search from "@/components/search";
 interface ArticleType {
   title: string;
   description: string;
-  urlToImage: string;
+  image: string;
   publishedAt: string;
   author: string;
   content: string;

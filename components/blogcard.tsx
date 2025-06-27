@@ -52,7 +52,7 @@ export default function BlogCard({ post }: BlogCardProps) {
               image: post.image,
               author: post.author,
               date: post.date,
-            //   category: post.source.name,
+              category: post.category,
               snippet: post.snippet || "No full content provided.",
               url: post.url,
               content: post.content,
