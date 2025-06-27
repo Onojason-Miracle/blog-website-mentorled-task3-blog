@@ -20,10 +20,10 @@ export default function ArticleDetailPage() {
     <>
       <main className="max-w-3xl mx-auto px-4 py-10 main">
         <h1 className="text-3xl font-bold mb-4 text-white-700">{title}</h1>
-        {/* <div className="flex items-center justify-start gap-2">
+        <div className="flex items-center justify-start gap-2">
           <strong className="text-white-900 text-sm mb-2">By: </strong>{" "}
           <p className="text-purple-500 text-sm mb-2">{category}</p>
-        </div> */}
+        </div>
         {image && (
           <img
             src={image}
